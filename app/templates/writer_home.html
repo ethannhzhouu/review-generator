@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>LyricBot</title>
+        <title>Review Text Generator!</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -19,24 +19,33 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ url_for('static',filename='/css/styles.css') }}" rel="stylesheet" />
     </head>
+
     <body id="page-top">
         <!-- Navigation-->
-        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-              <li class="sidebar-brand"><a href={{ url_for('home')}}>LyricBot Project</a></li>
-              <li class="sidebar-nav-item"><a href={{ url_for('home')}}>Home </a></li>
-              <li class="sidebar-nav-item"><a href={{ url_for('results')}}>Try The Model</a></li>
-              <li class="sidebar-nav-item"><a href="https://www.github.com">Our Github</a></li>
-              <li class="sidebar-nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Review Text Generator</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#theproject">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-info">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.github.com">Github</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.ai-camp.org">AICamp</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+      
+ 
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1 text-primary">LyricBot</h1>
-                <h2 class="mb-2 text-primary">'Algorithms and Blues' Edition</h2>
-                <h3 class="mb-5 text-light"><em>All your favorite artists. One AI.</em></h3>
+                <h1 class="mb-1 text-primary">ReviewText Generator</h1>
+                <h2 class="mb-2 text-primary">Code Writing Reviews</h2>
                 <a class="btn btn-primary btn-xl" href={{ url_for('results')}}>Try the Model</a>
             </div>
         </header>
@@ -44,133 +53,72 @@
         <section class="content-section bg-primary text-white text-center" id="theproject">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Specs + Features</h3>
-                    <h2 class="mb-5">The Project</h2>
+                    <br>
+                    <br>
+                    <h2 class="mb-5">Details</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-music-tone-alt"></i></span>
-                        <h4><strong>Great Music Taste</strong></h4>
-                        <p class="text-faded mb-0">LyricBot is a custom trained GPT-2 model that learned from over 94000 lyrics from the best rock artists of all time.</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-rocket"></i></span>
+                        <h4><strong>Based on Amazon Reviews</strong></h4>
+                        <p class="text-faded mb-0">Custom trained GPT-2 model, learned from over 20000 reviews from the most verified Amazon reviewers.</p>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-playlist"></i></span>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-paper-plane"></i></span>
                         <h4><strong>Interactive</strong></h4>
-                        <p class="text-faded mb-0">LyricBot will write lyrics based off of any prompt you provide it.</p>
+                        <p class="text-faded mb-0">ReviewTextGen will write a review based off of any prompt.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-clock"></i></span>
-                        <h4><strong>Timeline</strong></h4>
-                        <p class="text-faded mb-0">LyricBot was completed by teenagers over the course of three weeks this summer!</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-target"></i></span>
+                        <h4><strong>Purpose</strong></h4>
+                        <p class="text-faded mb-0">Project created to train myself in preparation to mentor @ AICamp</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-docs"></i></span>
-                        <h4><strong>Extensions</strong></h4>
-                        <p class="text-faded mb-0">Some extensions to this project include deploying it to the web, building a discord bot, or having the algorithms and blues LyricBot interact with new genres!</p>
+                        <h4><strong>Future</strong></h4>
+                        <p class="text-faded mb-0">Some future possibilities to this project include deploying it to the web, exploring new models, or building a discord bot!</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Team-->
-        <section class="content-section" id="aboutus">
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="contact-info">
             <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">About Us</h3>
-                    <h2 class="mb-5">The Team</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Cameron Jackson</div>
-                                  <div class="h2">Machine Learning Engineer</div>
-                                    <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
-                                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">Github</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://github.com/">Ethan Zhou</a></div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-1.jpg') }}" alt="..." />
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                   <div class="h1">Alex Duffy</div>
-                                    <div class="h2">Front End Designer</div>
-                                    <p class="mb-0">A WebDev enthusiast who loves Natural Language Processing!</p>
-                                </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">xethanhzhou@gmail.com</a></div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-2.jpg') }}" alt="..." />
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Michael Ke Zhang</div>
-                                    <div class="h2">Backend Engineer</div>
-                                    <p class="mb-0">A backend enthusiast who loves Natural Language Processing!</p>
-                                </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">AI-Camp</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://www.ai-camp.org/">AI-Camp</a></div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-3.jpg') }}" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Richard Hsu</div>
-                                    <div class="h2">Project Lead</div>
-                                    <p class="mb-0">A great leader who loves Natural Language Processing!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-4.jpg') }}" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Cydnee Harris</div>
-                                    <div class="h2">Quality Control</div>
-                                    <p class="mb-0">A thorough quality controller who loves Natural Language Processing!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-4.jpg') }}" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Stella Dong</div>
-                                    <div class="h2">Front End Engineer</div>
-                                    <p class="mb-0">An html enthusiast who loves Natural Language Processing!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-1.jpg') }}" alt="..." />
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/aicampdotorg/"><i class="icon-social-facebook"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/AICampOfficial"><i class="icon-social-twitter"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="https://github.com/minimaxir/aitextgen"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                <p class="text-muted small mb-0">Copyright &copy; LyricBot AI Camp Team (mitch cutts) 2022 </p>
-            </div>
-        </footer>
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <!-- TEXTGEN JS-->
